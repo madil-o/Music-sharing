@@ -1,4 +1,5 @@
 
+import time
 from duckduckgo_search import DDGS
 
 
@@ -10,7 +11,10 @@ def link_from_platform(platform, text):
   )
   return results[0]["href"]
 
-song = input("song name :")
-
-for i in ["spotify", "youtube", "deezer", "apple music"]:
-  print(link_from_platform(i, song))
+def get_links(song):
+  links = []
+  for platform in ["spotify","youtube", "deezer", "apple music"]:
+    links.append(link_from_platform(platform, song))
+    time.sleep(1)
+  
+  return links
