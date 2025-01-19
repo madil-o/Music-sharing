@@ -1,11 +1,14 @@
 
-from flask import Blueprint
+from flask import Blueprint, render_template, request
 
 views = Blueprint("views", __name__)
 
-@views.route("/")
+@views.route("/", methods=["GET", "POST"])
 def home():
-  return "<h1>Test</h1>"
+  if request.method == "POST":
+    song = request.form["song"]
+
+  return render_template("home.html")
 
 @views.route("/<int:number>")
 def test(number):
