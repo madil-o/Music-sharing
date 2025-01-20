@@ -30,6 +30,7 @@ def home():
 def test(link):
   song_db = Url.query.filter_by(id=link).first()
   if song_db:
-    return f"<h1>{song_db.links}</h1>"
+    song_db.links = get_platform_links.dico_of_link_string(song_db.links)
+    return render_template("sharing_page.html", song_db=song_db)
   else:
     return "<h1>Inconnu</h1>"
