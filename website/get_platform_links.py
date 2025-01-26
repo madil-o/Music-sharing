@@ -7,9 +7,17 @@ def link_from_platform(platform, text):
   results = DDGS().text(
     keywords=f"{platform} {text} song",
     backend="api",
-    max_results=5
+    max_results=1
   )
   return results[0]["href"]
+
+
+def get_cover(song):
+  results = DDGS().images(
+    keywords=f"{song} album cover",
+    max_results=1
+  )
+  return results[0]["image"]
 
 
 def get_links(song):
