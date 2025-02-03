@@ -9,9 +9,10 @@
   <body>
     <h3 align="center">Music Sharing</h3>
     
+    <img src={{ song_db.cover }} alt="cover"> <br>
+
     {% for platform in ["spotify","youtube", "deezer", "apple music"] %}
       <a href={{ song_db.links[platform] }} target="_blank"> {{platform}}</a> <br>
     {% endfor %}
   </body>
 </html>
-
