@@ -13,3 +13,34 @@ input {
   height: 40px;
   font-size:20px;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform_button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1DB954;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+.platform_button:hover {
+  background-color: #169c47;
+}
