@@ -1,5 +1,5 @@
 
-# Music sharing.
+# Music sharing
 
 A music sharing webapp (recommended to host) to share music between music platforms.
 
