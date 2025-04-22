@@ -17,10 +17,11 @@ A music sharing webapp (recommended to host) to share music between music platfo
 ## Installation & Configuration
 
 ```
-git clone https://github.com/madil-o/Better-Chesscom
-cd Better-Chesscom
-dune build
-[your browser] src/index.html
+pip install duckduckgo-search
+git clone https://github.com/madil-o/Music-sharing
+cd Music-sharing
+touch website/key [set a key]
+python3 main.py
 ```
 
 Running the program for the first time will create the database, but you must create a key under the website/key directory. Then you just have to enter your song name (and artist for better accuracy) and copy the link.
